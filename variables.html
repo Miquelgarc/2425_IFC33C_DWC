@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+<body>
+    <script>
+        var a = null;   // null
+        var b;          // undefined
+        var c = false;  // boolean
+        var d = 4;      // number
+        var e = 5.6;    // number
+        var f = "hola"  // String
+        var g = {       // Object
+            nombre: "Miquel",
+            apellidos: "Garcia Llabrés"
+        };
+
+        console.log(a, b, c, d, e, f, g);
+        console.log(typeof a);
+        console.log(typeof b);
+        console.log(typeof c);
+        console.log(typeof d);
+        console.log(typeof e);
+        console.log(typeof f);
+        console.log(typeof g);
+        
+        // Los tipos de las variables son dinamicas
+
+        a = 3;
+        console.log(a)
+        console.log(typeof a)
+
+        // var -> para declarar variables
+        // ES6 -> declarar las variables con let o const
+
+        // Ambito
+
+        let p1 = "hola";
+        function prueba(p1) {
+            p1 = "adios";
+            console.log(p1);
+        }
+        prueba();
+        console.log(p1);
+
+
+        z = 99; // MU MAL Provoca hoisting
+
+        console.log(z);
+    </script>
+    
+</body>
+</html>
