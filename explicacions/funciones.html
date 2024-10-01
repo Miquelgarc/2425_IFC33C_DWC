@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones</title>
+</head>
+<body>
+    <script>
+        function suma(a, b) {
+            return a + b;
+        }
+
+        console.log(suma(3, 4));
+
+        // Las funciones en js son valores
+        var a = suma(4,5); // 9
+        var b = suma; // b guarda toda la funcion suma
+        var c = b(4,5); // 9
+        console.log(b);
+        console.log(c);
+
+        // Constructor para un objeto a partir de una funcion
+        function Persona(nombre, apellidos) {
+            this.nombre = nombre;
+            this.apellidos = apellidos;
+        }
+
+        persona1 = new Persona("Miquel", "Garcia Llabrés");
+        console.log(persona1);
+
+
+        // Funciones anónimas 
+        var a = function() {
+            return "Hola"
+        }
+
+        var b = function(x) {
+            return "Hola " + x
+        }
+
+        console.log(a());
+        console.log(b("Miquel"));
+
+
+        // Funciones flecha
+        () => {
+            return"Hola"
+        }
+
+        (x) => {
+            return "Hola " + x
+        }
+
+    </script>
+</body>
+</html>
