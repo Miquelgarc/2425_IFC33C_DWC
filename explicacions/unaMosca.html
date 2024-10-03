@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mosca</title>
+</head>
+
+
+<body>
+    <script>
+        let canco = "Una mosca volava per la llum";
+
+
+        function substitueixVocals(text, vocal) {
+            return text.replace(/[aeiou]/gi, vocal);
+        }
+
+
+        let vocals = ['a', 'e', 'i', 'o', 'u'];
+
+
+        vocals.forEach(vocal => {
+            let cancoModificada = substitueixVocals(canco, vocal);
+            console.log(cancoModificada);
+        });
+        
+
+
+    </script>
+</body>
+
+
+</html>
