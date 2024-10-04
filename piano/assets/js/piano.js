@@ -1,4 +1,4 @@
-var cerca = [];
+var cerca = ["DO"];
 var partitures = [
     { nom: "La Balanguera", notes: ["DO", "RE", "MI", "FA", "FA", "SOL", "SOL", "LA#", "LA#"] },
     { nom: "Happy Birthday", notes: ["DO", "DO", "RE", "DO", "FA", "MI", "DO", "DO", "RE", "DO", "SOL", "FA"] }
@@ -15,7 +15,6 @@ function addcerca(nom, tipus){
 
 function cercador() {
     var resultats = [];
-
     partitures.forEach(partitura => {
         var notesPartitura = partitura.notes.join(" ");
         var notesCerca = cerca.join(" ");
@@ -27,7 +26,7 @@ function cercador() {
     if (resultats.length>0) {
         console.log("Partitures trobades: " + resultats.join(", "));
     } else{
-        console.log("Sense resultats")
+        console.log("Sense resultats");
     }
 }
-
+cercador();
