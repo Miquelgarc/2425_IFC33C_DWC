@@ -1,4 +1,4 @@
-var cerca = ["DO"];
+var cerca = ["DO", "DO", "RE", "DO"];
 var partitures = [
     { nom: "La Balanguera", notes: ["DO", "RE", "MI", "FA", "FA", "SOL", "SOL", "LA#", "LA#"] },
     { nom: "Happy Birthday", notes: ["DO", "DO", "RE", "DO", "FA", "MI", "DO", "DO", "RE", "DO", "SOL", "FA"] }
