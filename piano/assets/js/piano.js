@@ -7,7 +7,36 @@ function Nota(nom, tipus) {
     this.nom = nom;
     this.tipus = tipus;
 }
+function Partitura(nom, melodia) {
+    this.nom = nom;
+    this.melodia = melodia;
+}
 
+let melodiaLaBalaguera = [
+    new Nota("DO", ""),
+    new Nota("RE", ""),
+    new Nota("MI", ""),
+    new Nota("FA", ""),
+    new Nota("FA", ""),
+    new Nota("SOL", ""),
+    new Nota("SOL", ""),
+    new Nota("LA", "#"),
+    new Nota("LA", "#")
+];
+let melodiaHappyBirthday = [
+    new Nota("DO", ""),
+    new Nota("DO", ""),
+    new Nota("RE", ""),
+    new Nota("DO", ""),
+    new Nota("FA", ""),
+    new Nota("MI", ""),
+    new Nota("DO", ""),
+    new Nota("DO", ""),
+    new Nota("RE", ""),
+    new Nota("DO", ""),
+    new Nota("SOL", ""),
+    new Nota("FA", "")
+];
 function addcerca(nom, tipus) {
     var novaNota = new Nota(nom, tipus);
     cerca.push(novaNota.nom + novaNota.tipus);
@@ -19,16 +48,15 @@ function cercador1() {
     for (var partitura of partitures) {
         if (comparar(partitura, cerca)) {
             resultats.push(partitura.nom);
-            console.log(partitura.nom)
         }
 
     }
 
-/*     if (resultats.length > 0) {
+    if (resultats.length > 0) {
         console.log("Partitures trobades: " + resultats);
     } else {
         console.log("Sense resultats");
-    } */
+    }
 }
 
 function comparar(partitura, cerca) {
