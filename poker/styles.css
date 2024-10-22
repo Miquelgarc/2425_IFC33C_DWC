@@ -1,0 +1,73 @@
+/* Estilo del fondo de la página */
+body {
+    background-image: url(img/pokerBoard.jpg); /* Cambia esta URL por una imagen de fondo que prefieras */
+    background-size: cover; /* Ajustar el tamaño del fondo para cubrir toda la pantalla */
+    background-position: center;
+    font-family: 'Arial', sans-serif;
+    color: white; /* Color de texto blanco para contrastar con el fondo */
+    text-align: center; /* Centra el contenido del cuerpo */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Estilo del botón */
+button {
+    width: 400px;
+    background-color: #1C6E43; /* Verde oscuro, inspirado en las mesas de póker */
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: 2px solid #FFD700; /* Borde dorado */
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Sombra para darle efecto de botón en 3D */
+    transition: transform 0.2s, background-color 0.3s; /* Transición para cuando se hace hover */
+}
+
+button:hover {
+    background-color: #145E32; /* Cambia a un verde más oscuro al hacer hover */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el ratón */
+}
+
+/* Estilo del contenedor de cartas (river) */
+.river {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Estilo para las imágenes de las cartas */
+.river img {
+    width: 150px; /* Tamaño de las cartas */
+    height: auto;
+    border: 2px solid #000;
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+.river img:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo del resultado */
+.result {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con transparencia */
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+    color: #FFD700; /* Texto dorado para resaltar */
+    text-shadow: 1px 1px 2px black; /* Efecto de sombra en el texto */
+}
+
+/* Estilo general del contenido */
+div {
+    margin-bottom: 20px;
+}
