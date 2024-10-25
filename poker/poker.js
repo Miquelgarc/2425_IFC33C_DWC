@@ -1,7 +1,6 @@
-function Carta(nom, tipo, img) {
-    this.nom = nom;
-    this.tipo = tipo;
-    this.img = img
+function Carta(valor, palo) {
+    this.valor = valor;
+    this.palo = palo; 
 }
 
 let baraja = [
@@ -58,7 +57,7 @@ function comprovarParella(river) {
 
     for (let i = 0; i < river.length - 1; i++) {
         for (let j = i + 1; j < river.length; j++) {
-            if (river[i].nom === river[j].nom) {
+            if (river[i].valor === river[j].valor) {
                 parejas = true;
                 break;
             }
@@ -76,10 +75,10 @@ function mostrarRiver(river) {
     let x;
     div = document.querySelector(".river");
     for (let carta of river) {
-        nom = carta.nom;
-        tipo = carta.tipo;
+        valor = carta.valor;
+        palo = carta.palo;
         x = document.createElement("img");
-        x.setAttribute("src", "cards/" + nom + "_of_" + tipo + ".png")
+        x.setAttribute("src", "cards/" + valor + "_of_" + palo + ".png")
         div.appendChild(x);
     }
 
