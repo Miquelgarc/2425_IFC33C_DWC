@@ -51,7 +51,7 @@ function mostrarTaulaPartitures() {
         accions.appendChild(boto);
         //BOTO BORRAR
         let boto2 = document.createElement("button");
-        boto2.setAttribute("onclick", "borrarPartitura('" + partitura.nombre + "')");
+        boto2.setAttribute("onclick", "borrarPartitura()");
         let i2 = document.createElement("i");
         i2.setAttribute("class", "fas fa-trash");
         boto2.appendChild(i2);
@@ -72,5 +72,9 @@ function borrarPartitura() {
     } else {
         alert("Acció cancel·lada");
     }
+}
+
+function mostrarLogin() {
+    window.open("login.html", "up", "width=600, height=400");
 }
 mostrarTaulaPartitures();
