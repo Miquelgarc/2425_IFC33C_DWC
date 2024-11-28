@@ -32,7 +32,6 @@ function mostrarTaulaPartitures() {
     let tbody = document.createElement("tbody");
     for (let partitura of partituras) {
         let fila = document.createElement("tr");
-        fila.setAttribute("id", partitura.nombre);
         // TITOL
         let titol = document.createElement("td");
         titol.innerHTML = partitura.nombre;
@@ -66,10 +65,10 @@ function mostrarTaulaPartitures() {
 
 }
 
-function borrarPartitura(titol) {
+function borrarPartitura() {
     if (confirm("Estàs segur que vols esborrar aquesta partitura?")) {
+        event.target.parentElement.parentElement.remove();
         alert("Element esborrat");
-        document.getElementById(titol).remove();
     } else {
         alert("Acció cancel·lada");
     }
