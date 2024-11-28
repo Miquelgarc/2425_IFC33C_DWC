@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Partitures - Score Finder</title>
     <link rel="stylesheet" href="assets/css/partitures.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <header class="header">
@@ -12,7 +13,7 @@
             <h1 class="logo">Score Finder</h1>
             <div class="buttons">
                 <button class="header-button">Partitures</button>
-                <button class="header-button">Login</button>
+                <button class="header-button" onclick="mostralogin()">Login</button>
             </div>
         </div>
     </header>
@@ -20,15 +21,8 @@
         <div class="new-score">
             <button class="new-score-button">Nova partitura</button>
         </div>
-        <table class="score-table">
-            <thead>
-                <tr>
-                    <th>Títol</th>
-                    <th>Idioma Original</th>
-                    <th>Accions</th>
-                </tr>
-            </thead>
-        </table>
+
     </main>
+    <script src="assets/js/partitures.js"></script>
 </body>
 </html>
