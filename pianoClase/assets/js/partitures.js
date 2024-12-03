@@ -4,16 +4,30 @@ function Partitura(nombre, idioma) {
 }
 
 let partituras = [];
-partituraLaBalaguera = new Partitura("La Balaguera", "Català");
-partituras.push(partituraLaBalaguera);
-partituraHappyBirthday = new Partitura("Happy Birthday", "Castellano");
-partituras.push(partituraHappyBirthday);
-partituraMerryChristmas = new Partitura("Merry Christmas", "English");
-partituras.push(partituraMerryChristmas);
-partituraSchöneWeihnachten = new Partitura("Schöne Weihnachten", "Deutsch");
-partituras.push(partituraSchöneWeihnachten);
-partituraJoyeuxNoël = new Partitura("Joyeux Noël", "Français");
-partituras.push(partituraJoyeuxNoël);
+
+// Función para generar nombres e idiomas de forma dinámica
+function generarPartituras(cantidad) {
+    let nombresBase = [
+        "La Balaguera", "Happy Birthday", "Merry Christmas", 
+        "Schöne Weihnachten", "Joyeux Noël", "Frère Jacques", 
+        "O Tannenbaum", "Silent Night", "Feliz Navidad", 
+        "Auld Lang Syne"
+    ];
+    let idiomas = ["Català", "Castellano", "English", "Deutsch", "Français", "Italiano", "Português", "Nederlands", "Русский", "中文"];
+
+    for (let i = 0; i < cantidad; i++) {
+        // Seleccionar un nombre e idioma al azar
+        let nombre = nombresBase[i % nombresBase.length] + ` ${i + 1}`;
+        let idioma = idiomas[i % idiomas.length];
+
+        // Crear y agregar la partitura al array
+        let partitura = new Partitura(nombre, idioma);
+        partituras.push(partitura);
+    }
+}
+
+// Generar 100 partituras
+generarPartituras(100);
 
 function mostrarTaulaPartitures() {
     // HEAD TAULA
