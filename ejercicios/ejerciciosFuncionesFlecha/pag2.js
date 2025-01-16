@@ -4,7 +4,8 @@ let numeros = [3, 8, 133, 50, 2, 33, 7, 9, 10, 999, 36, 735];
 
 
 let ordenar = (numeros) => {
-    let arrayAsc = [...numeros].sort((a, b) => a - b);
+    let arrayAsc= []
+    arrayAsc.push(numeros).sort((a, b) => a - b);
     let arrayDesc = [...numeros].sort((a, b) => b - a);
     return [arrayAsc, arrayDesc];
 }
@@ -86,3 +87,4 @@ let mostrarPropiedadesWindow = () => {
     document.body.appendChild(ul);
 }
 mostrarPropiedadesWindow();
+

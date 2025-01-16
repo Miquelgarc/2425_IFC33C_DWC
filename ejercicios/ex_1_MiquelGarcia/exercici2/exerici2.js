@@ -94,6 +94,7 @@ for (let llibre of llibres) {
     let autor = new Autor(llibre.autor.nombre, llibre.autor.apellidos);
     let llibreNou = new Llibre(llibre.títol, autor, llibre.preu, llibre.ISBN, llibre.editorial, llibre.numeroDeEdicio, llibre.anyDePublicacio, llibre.generos);
     llibres2.push(llibreNou);
+    llibres2.sort((a, b) => a.anyDePublicacio - b.anyDePublicacio);
 }
 
 console.log(llibres2);

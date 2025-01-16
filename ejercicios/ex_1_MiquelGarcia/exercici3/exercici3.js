@@ -23,7 +23,6 @@ function classificarPerEdat(edat) {
             break;
         default:
             classificacio = "Edat no vàlida";
-            break;
     }
     return classificacio;
 }

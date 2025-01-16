@@ -35,9 +35,9 @@ const recibos = [
  * Genera un recibo en formato tabla a partir de un array de productos.
  * @param {Object[]} recibo - Un array de objetos que conforman el recibo.
  */
+
 function generarRecibo(recibo) {
     let total = 0;
-
     console.log("---- RECIBO ----");
     console.log("Producto        | Cantidad | Precio Unitario | Subtotal ");
     console.log("--------------------------------------------------------");
